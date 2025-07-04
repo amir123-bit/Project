@@ -1,0 +1,39 @@
+Celsius to Fahrenheit
+when btnCtoF.Click do
+    set lblResult.Text to 
+        ((number from txtInput.Text) * 9 / 5) + 32
+
+ Fahrenheit to Celsius
+when btnFtoC.Click do
+    set lblResult.Text to 
+        ((number from txtInput.Text) - 32) * 5 / 9
+
+Celsius to Kelvin
+when btnCtoK.Click do
+    set lblResult.Text to 
+        (number from txtInput.Text) + 273.15
+
+Clear all fields
+when btnClear.Click do
+    set txtInput.Text to ""
+    set lblResult.Text to ""
+
+Celsius to Fahrenheit
+when btnCtoF.Click do
+    set lblResult.Text to 
+        ((number from txtInput.Text) * 9 / 5) + 32
+
+ Fahrenheit to Celsius
+when btnFtoC.Click do
+    set lblResult.Text to 
+        ((number from txtInput.Text) - 32) * 5 / 9
+
+Celsius to Kelvin
+when btnCtoK.Click do
+    set lblResult.Text to 
+        (number from txtInput.Text) + 273.15
+
+Clear all fields
+when btnClear.Click do
+    set txtInput.Text to ""
+    set lblResult.Text to ""
