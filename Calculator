@@ -1,0 +1,28 @@
+ADDITION
+when btnAdd.Click do
+    set lblResult.Text to 
+        (call number txtNum1.Text) + (call number txtNum2.Text)
+
+ SUBTRACTION
+when btnSubtract.Click do
+    set lblResult.Text to 
+        (call number txtNum1.Text) - (call number txtNum2.Text)
+
+MULTIPLICATION
+when btnMultiply.Click do
+    set lblResult.Text to 
+        (call number txtNum1.Text) * (call number txtNum2.Text)
+
+DIVISION
+when btnDivide.Click do
+    if txtNum2.Text ≠ "0" then
+        set lblResult.Text to 
+            (call number txtNum1.Text) / (call number txtNum2.Text)
+    else
+        set lblResult.Text to "Error: Divide by 0"
+
+ CLEAR BUTTON
+when btnClear.Click do
+    set txtNum1.Text to ""
+    set txtNum2.Text to ""
+    set lblResult.Text to ""              
