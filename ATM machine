@@ -1,0 +1,42 @@
+when green flag clicked
+set [Balance v] to (1000)
+ask [Enter your PIN:] and wait
+set [EnteredPIN v] to (answer)
+if <(EnteredPIN) = [1234]> then
+  broadcast [Show Menu]
+else
+  say [Incorrect PIN. Restarting...] for (2) seconds
+  wait (1) seconds
+  stop [all]
+end
+
+when I receive [Show Menu]
+show
+
+when this sprite clicked
+say (join [Your balance is $] (Balance)) for (3) seconds
+
+when I receive [Show Menu]
+show
+
+when this sprite clicked
+ask [Enter deposit amount:] and wait
+set [Amount v] to (answer)
+change [Balance v] by (Amount)
+say [Deposit successful!] for (2) seconds
+
+when I receive [Show Menu]
+show
+
+when this sprite clicked
+ask [Enter withdrawal amount:] and wait
+set [Amount v] to (answer)
+if <(Amount) > (Balance)> then
+  say [Insufficient funds] for (2) seconds
+else
+  change [Balance v] by ((0) - (Amount))
+  say [Withdrawal successful!] for (2) seconds
+end
+
+when green flag clicked
+hid
