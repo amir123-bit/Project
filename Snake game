@@ -1,0 +1,295 @@
+-
+
+ Features:
+
+Control the snake using arrow keys.
+
+Eat apples to grow the snake.
+
+Game ends if snake touches itself or walls.
+
+
+
+---
+
+
+
+ Sprites Needed:
+
+1. Snake Head (Name it: SnakeHead)
+
+
+2. Apple (Name it: Apple)
+
+
+3. Snake Body Clone (created via cloning)
+
+
+4. Backdrop (Grid or plain color)
+
+
+
+
+---
+
+ Variables (for all sprites):
+
+Direction (stores direction: "up", "down", etc.)
+
+Score
+
+SnakeLength
+
+
+
+---
+
+
+
+Copy these blocks into Scratch for each sprite:
+
+
+---
+
+ SnakeHead Sprite:
+
+when green flag clicked
+go to x: (0) y: (0)
+set [Score v] to (0)
+set [SnakeLength v] to (0)
+set [Direction v] to [right]
+delete this clone
+forever
+  if <key [up arrow] pressed?> then
+    set [Direction v] to [up]
+  end
+  if <key [down arrow] pressed?> then
+    set [Direction v] to [down]
+  end
+  if <key [left arrow] pressed?> then
+    set [Direction v] to [left]
+  end
+  if <key [right arrow] pressed?> then
+    set [Direction v] to [right]
+  end
+  create clone of [myself v]
+  wait (0.2) seconds
+end
+
+when I start as a clone
+if <(Direction) = [up]> then
+  change y by (10)
+end
+if <(Direction) = [down]> then
+  change y by (-10)
+end
+if <(Direction) = [left]> then
+  change x by (-10)
+end
+if <(Direction) = [right]> then
+  change x by (10)
+end
+wait (SnakeLength) * 0.2 seconds
+delete this clone
+
+
+---
+
+ Apple Sprite:
+
+when green flag clicked
+go to [random position v]
+show
+
+forever
+  if <touching [SnakeHead v]?> then
+    change [Score v] by (1)
+    change [SnakeLength v] by (1)
+    go to [random position v]
+  end
+end
+
+
+---
+
+ (Optional) Game Over Logic (Collision):
+
+Add to SnakeHead:
+
+-
+
+ Features:
+
+Control the snake using arrow keys.
+
+Eat apples to grow the snake.
+
+Game ends if snake touches itself or walls.
+
+
+
+---
+
+
+
+ Sprites Needed:
+
+1. Snake Head (Name it: SnakeHead)
+
+
+2. Apple (Name it: Apple)
+
+
+3. Snake Body Clone (created via cloning)
+
+
+4. Backdrop (Grid or plain color)
+
+
+
+
+---
+
+ Variables (for all sprites):
+
+Direction (stores direction: "up", "down", etc.)
+
+Score
+
+SnakeLength
+
+
+
+---
+
+
+
+Copy these blocks into Scratch for each sprite:
+
+
+---
+
+ SnakeHead Sprite:
+
+when green flag clicked
+go to x: (0) y: (0)
+set [Score v] to (0)
+set [SnakeLength v] to (0)
+set [Direction v] to [right]
+delete this clone
+forever
+  if <key [up arrow] pressed?> then
+    set [Direction v] to [up]
+  end
+  if <key [down arrow] pressed?> then
+    set [Direction v] to [down]
+  end
+  if <key [left arrow] pressed?> then
+    set [Direction v] to [left]
+  end
+  if <key [right arrow] pressed?> then
+    set [Direction v] to [right]
+  end
+  create clone of [myself v]
+  wait (0.2) seconds
+end
+
+when I start as a clone
+if <(Direction) = [up]> then
+  change y by (10)
+end
+if <(Direction) = [down]> then
+  change y by (-10)
+end
+if <(Direction) = [left]> then
+  change x by (-10)
+end
+if <(Direction) = [right]> then
+  change x by (10)
+end
+wait (SnakeLength) * 0.2 seconds
+delete this clone
+
+
+---
+
+ Apple Sprite:
+
+when green flag clicked
+go to [random position v]
+show
+
+forever
+  if <touching [SnakeHead v]?> then
+    change [Score v] by (1)
+    change [SnakeLength v] by (1)
+    go to [random position v]
+  end
+end
+
+
+---
+
+ (Optional) Game Over Logic (Collision):
+
+Add to SnakeHead:
+
+if <touching [edge v]> then
+  say [Game Over!] for (2) seconds
+  stop [all]
+end
+
+
+---
+
+ Game Complete!
+
+Run the project and:
+
+Use arrow keys to move
+
+Eat apples to grow
+
+Each segment is a clone that disappears after a short time
+
+
+
+---
+
+Would you like:
+
+The downloadable .sb3 file?
+
+The same game made in Blockly or Node-RED?
+
+
+Let me know and I can generate that for you.if <touching [edge v]> then
+  say [Game Over!] for (2) seconds
+  stop [all]
+end
+
+
+---
+
+ Game Complete!
+
+Run the project and:
+
+Use arrow keys to move
+
+Eat apples to grow
+
+Each segment is a clone that disappears after a short time
+
+
+
+---
+
+Would you like:
+
+The downloadable .sb3 file?
+
+The same game made in Blockly or Node-RED?
+
+
+Let me know and I can generate that for you
