@@ -1,0 +1,13 @@
+when green flag clicked
+hide
+when this sprite clicked
+say pick random item from [fortune1 v to fortune5 v] for 3 seconds
+when green flag clicked
+delete all of [Fortunes v]
+add "A great opportunity is near!" to [Fortunes v]
+add "Today is your lucky day!" to [Fortunes v]
+add "You will learn something new." to [Fortunes v]
+add "A surprise is coming your way!" to [Fortunes v]
+add "Take a chance today." to [Fortunes v]
+when this sprite clicked
+say (item (pick random 1 to (length of [Fortunes v])) of [Fortunes v]) for 3 seconds
