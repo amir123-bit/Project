@@ -1,0 +1,33 @@
+when green flag clicked
+set [TotalPoints v] to [0]
+set [CurrentSubject v] to [1]
+ask [How many subjects?] and wait
+set [SubjectCount v] to (answer)
+
+repeat (SubjectCount)
+  ask (join [Enter grade for subject #] (CurrentSubject)) and wait
+  set [Grade v] to (answer)
+  
+  if <(Grade) = [A]> then
+    change [TotalPoints v] by (4)
+  else
+    if <(Grade) = [B]> then
+      change [TotalPoints v] by (3)
+    else
+      if <(Grade) = [C]> then
+        change [TotalPoints v] by (2)
+      else
+        if <(Grade) = [D]> then
+          change [TotalPoints v] by (1)
+        else
+          change [TotalPoints v] by (0)
+        end
+      end
+    end
+  end
+
+  change [CurrentSubject v] by (1)
+end
+
+set [GPA v] to ((TotalPoints) / (SubjectCount))
+say (join [Your GPA is: ] (GPA)) for (4) seconds
